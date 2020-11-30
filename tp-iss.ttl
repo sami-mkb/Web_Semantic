@@ -343,7 +343,7 @@ tp-iss:OWLNamedIndividual_40c87ce2_4767_4cb0_9cd7_1dda03352a38 rdf:type owl:Name
 ###  http://homepages.laas.fr/nseydoux/ontologies/tp-iss#OWLNamedIndividual_4ef6700d_d3ca_437e_96a6_5f531744c9fd
 tp-iss:OWLNamedIndividual_4ef6700d_d3ca_437e_96a6_5f531744c9fd rdf:type owl:NamedIndividual ,
                                                                         tp-iss:OWLClass_6d5bb482_3e1e_47a0_be94_995d4df0f35e ;
-                                                               rdfs:label "Hygrométrie"@fr, rdfs:label "Humidity" .
+                                                               rdfs:label "Hygrométrie"@fr, "Humidity" .
 
 
 ###  http://homepages.laas.fr/nseydoux/ontologies/tp-iss#OWLNamedIndividual_4f731814_91f0_4d75_a5cf_4a0d3629a308
