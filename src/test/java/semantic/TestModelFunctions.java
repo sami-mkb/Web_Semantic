@@ -57,7 +57,7 @@ public class TestModelFunctions
 		Controler c = new Controler();
 		TimestampEntity t = new TimestampEntity("2014-02-13T06:20:00");
 		String instantURI = c.getCustomModel().createInstant(t);
-		String paramURI = c.getModel().getEntityURI("Température").get(0);
+		String paramURI = c.getModel().getEntityURI("Temperature").get(0);
 		String value = "25.0";
 		String obsURI = c.getCustomModel().createObs(value, paramURI, instantURI);
 		// Entities relevant to the test
