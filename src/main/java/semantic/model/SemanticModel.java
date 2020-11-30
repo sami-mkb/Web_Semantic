@@ -1,10 +1,14 @@
 package semantic.model;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -296,17 +300,17 @@ public class SemanticModel implements IConvenienceInterface
 	void loadFromFile(String path, String base, String lang, boolean supportObjectProperties)
 	{
 		Model tmpModel = ModelFactory.createDefaultModel();
-		FileReader f = null;
-		try
-		{
-			f = new FileReader(new File(path));
-		}
-		catch (FileNotFoundException e)
-		{
-			e.printStackTrace();
-		}
-		tmpModel.read(f, base, lang);
-		this.writeFromModel(tmpModel, supportObjectProperties);
+		try (FileInputStream fis = new FileInputStream(path);
+		        InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+		        BufferedReader reader = new BufferedReader(isr)
+		   ) {
+
+		   tmpModel.read(reader, base, lang);
+		   this.writeFromModel(tmpModel, supportObjectProperties);
+
+		   } catch (IOException e) {
+		       e.printStackTrace();
+		   }
 	}
 	
 	@Override

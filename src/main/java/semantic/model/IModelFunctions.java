@@ -6,7 +6,7 @@ package semantic.model;
 public interface IModelFunctions
 {
 	/**
-	 * Creates an instance of the class "Lieu" of your ontology
+	 * Creates an instance of the class "Place" of your ontology
 	 * @param name
 	 * @return the URI of the instance
 	 */
