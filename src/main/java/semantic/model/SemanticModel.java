@@ -130,8 +130,8 @@ public class SemanticModel implements IConvenienceInterface
 		this.temperatureSensor1URI = this.getEntityURI("TemperatureSensor_1").get(0);
 		this.temperatureSensor2URI = this.getEntityURI("TemperatureSensor_2").get(0);
 		this.temperatureSensor3URI = this.getEntityURI("TemperatureSensor_3").get(0);
-		this.temperatureURI = this.getEntityURI("Température").get(0);
-		this.humidityURI = this.getEntityURI("Hygrométrie").get(0);
+		this.temperatureURI = this.getEntityURI("Temperature").get(0);
+		this.humidityURI = this.getEntityURI("Humidity").get(0);
 	}
 	
 	public void beginWriteTransaction()

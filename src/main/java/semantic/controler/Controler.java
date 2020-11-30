@@ -56,7 +56,7 @@ public class Controler
 		{
 			// TODO : Change the path to the one of the file you downloaded
 			List<ObservationEntity> obsList = JSONEndpoint.parseObservations("tempm.txt");
-			String tempURI = c.model.getEntityURI("Température").get(0);
+			String tempURI = c.model.getEntityURI("Temperature").get(0);
 			c.getCustomControl().instantiateObservations(obsList, tempURI);
 			// TODO : Same thing, for humidity
 			obsList = JSONEndpoint.parseObservations("tempm.txt");
