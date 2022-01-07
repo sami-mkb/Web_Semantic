@@ -55,13 +55,14 @@ public class Controler
 		try
 		{
 			// TODO : Change the path to the one of the file you downloaded
-			List<ObservationEntity> obsList = JSONEndpoint.parseObservations("tempm.txt");
+			List<ObservationEntity> obsList = JSONEndpoint.parseObservations("C:\\Users\\khali\\OneDrive\\Desktop\\INSA\\Semantic_web_of_things\\tempm.txt");
 			String tempURI = c.model.getEntityURI("Temperature").get(0);
 			c.getCustomControl().instantiateObservations(obsList, tempURI);
 			// TODO : Same thing, for humidity
-			obsList = JSONEndpoint.parseObservations("tempm.txt");
-			String humidityURI = c.model.getEntityURI("Température").get(0);
+			/*obsList = JSONEndpoint.parseObservations("hum.txt");
+			String humidityURI = c.model.getEntityURI("Humidity").get(0);
 			c.getCustomControl().instantiateObservations(obsList, humidityURI);
+			*/
 			// TODO : Change the path so that it points where you want the export to be done
 			c.exportModel("export.ttl");
 		}
